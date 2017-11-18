@@ -1,0 +1,6 @@
+LCD monitor
+raspberry pi speaker
+raspberry pi microphone
+usb 허브 유전원
+hdmi 단자
+iptime 동글
