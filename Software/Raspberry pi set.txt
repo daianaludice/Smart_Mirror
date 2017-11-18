@@ -1,0 +1,38 @@
+1.라즈베리 파이 os 설치
+
+https://www.raspberrypi.org/downloads/raspbian
+사이트에서 라즈비안 jessie 풀 버전 설치
+
+sd 카드를 삽입하고 부팅 디스크 생성
+
+sd카드 삽입 후 win32diskImager 설치.
+다운받은 raspbian-jessie.zip 파일 압축을 풀고
+win32DiskImager 실행 후 이미지 파일에서 raspbian-jessie.img 이미지 파일 선택
+이동식디스크 드라이브 선택 -> write 버튼 -> yes 누르고 선택 진행
+
+완료 후 sd카드를 라즈베리파이 보드에 삽입
+
+전원 공급을 하면 실행된다.
+
+2.환경 설정
+
+terminal 실행
+sudo raspi-config
+
+1) 언어 설정 및 시간 설정
+ 5. Localisation Options 선택
+  -I1 change locale 선택
+    en_USO ISO-8859-1, UTF-8, ko_kr UTF-8 선택한다.
+    -> ko_kr UTF-8은 있으나 다른 것이 없음
+    => en_US ISO-8859-1, en_US UTF-8 을 대신 선택
+     Default locale for the system environment : 일단 None 선택
+  -I2 Change Timezone
+     Asia -> Seoul 선택
+Ok 후 sudo reboot
+
+2) 패스워드 설정
+ sudo passwd root
+ 후 패스워드 설정
+
+--------- 2017.11.17
+
