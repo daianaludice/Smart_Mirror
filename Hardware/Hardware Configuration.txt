@@ -6,3 +6,18 @@
 2. lsusb 로 usb 연결 장치 목록 확인
 (사진 참고)
 
+3. internet 연결
+ - iwconfig
+ -iwlist wlan0 scan
+ -su -
+ -> 여기서 비밀번호 입력시 에러나옴
+    blog.daum.net/faith93/15208181 참고
+    sudo passwd root - passwd 업데이트 후 성공
+   
+ -wpa_pssphrase wifi이름 wifi패스워드 >> /etc/wpa_supplicant/wpa_supplicant.conf
+ - vi /etc/wpa_supplicant/wpa_supplicant.conf 으로 확인
+
+ -sudo ifup wlan0
+
+
+
